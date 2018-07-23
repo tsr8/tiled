@@ -262,11 +262,17 @@ Product {
                     "libstdc++-6.dll",
                     "libwinpthread-1.dll",
                 ]
-            } else {
-                return [
-                    "MSVCP120.DLL",
-                    "MSVCR120.DLL",
-                ]
+            } else if (qbs.toolchain.contains("msvc")) {
+                if (cpp.compilerVersionMajor >= 19) {
+                    return [
+                        "MSVCP140.DLL",
+                    ]
+                } else {
+                    return [
+                        "MSVCP120.DLL",
+                        "MSVCR120.DLL",
+                    ]
+                }
             }
         }
         qbs.install: true
