@@ -179,6 +179,8 @@ Allegro
 -  `allegro\_tiled <https://github.com/dradtke/allegro_tiled>`__
    integrates Tiled support with `Allegro
    5 <http://alleg.sourceforge.net/>`__.
+   
+-  `Castle Game Engine <https://castle-engine.io/>` Free open-source 3D and 2D game engine using Object Pascal.
 
 cocos2d
 ~~~~~~~
